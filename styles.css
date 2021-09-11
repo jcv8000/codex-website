@@ -1,0 +1,121 @@
+html {
+    scroll-padding-top: 30px;
+}
+
+.navbar-link {
+    color: white !important;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navbar-link:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+@media (max-width: 1312px) {
+    .mainImg {
+        width: 90vw !important;
+    }
+}
+
+@media (max-width: 632px) {
+    #logo {
+        width: 90vw !important;
+    }
+}
+
+.nav-pills .nav-link {
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid lightgray;
+}
+
+.lead {
+    font-weight: 400;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.btn2 {
+    box-shadow: inset 0px 1px 0px 0px #97c4fe;
+    background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+    background-color: #3d94f6;
+    border-radius: 5px;
+    border: 1px solid #337fed;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-shadow: 0px 2px 0px #00000070;
+}
+
+.btn2:hover {
+    background: linear-gradient(to bottom, #58A2F7 5%, #3477E2 100%);
+    background-color: #58A2F7;
+    color: white;
+    text-decoration: none;
+}
+
+.btn2:active {
+    background: linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+    background-color: #1e62d0;
+    color: white;
+    text-decoration: none;
+}
+
+.btn2:focus {
+    outline: none;
+}
+
+li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.fade-in {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem !important;
+}
