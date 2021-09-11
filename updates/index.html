@@ -62,7 +62,315 @@
 
     <!-- CONTENT -->
 
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Changelog</h1>
+    </div>
 
+    <div class="container my-5">
+        <div class="card" id="1-4-1">
+            <div class="card-body">
+                <h5 class="card-title"><a href="#1-4-1">Version 1.4.1</a></h5>
+
+                <p class="card-text">Changes:</p>
+                <ul>
+                    <li><strong>Fixed a code execution vulnerability</strong> with notebook names/page names. This could
+                        only happen if you typed in a malicious name yourself or downloaded a <code>save.json</code>
+                        file from someone else and put it in your save directory.</li>
+                    <li><strong>Using a code block with the &quot;other&quot; language doesn&#39;t freeze the editor
+                            anymore and highlights properly</strong></li>
+                    <li>The code language overlay now doesn&#39;t show if there&#39;s no language/other</li>
+                    <li>Added menu options and macros for Nim and OCaml (macros: <code>[nim]</code> and
+                        <code>[ocaml]</code>)</li>
+                    <li>Added a section in the &quot;Basic Editing&quot; doc about how to paste in images</li>
+                </ul>
+
+                <p class="card-text"><a href="/download/">Download Codex 1.4.1</a></p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">September 10, 2021 (Windows, Linux)</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="card" id="1-4-0">
+            <div class="card-body">
+                <h5 class="card-title"><a href="#1-4-0">Version 1.4.0</a></h5>
+
+                <p class="card-text">Changes:</p>
+                <ul>
+                    <li><strong>Added support for KaTeX equations in notes</strong></li>
+                    <li><strong>You can now collapse large code blocks by clicking the arrow icon in the top-right of
+                            the code block</strong></li>
+                    <li><strong>Added Markdown exporting</strong></li>
+                    <li><strong>Added an option to export all of the pages in a notebook to PDF/markdown</strong></li>
+                    <li><strong>Included a better default font for Linux users</strong> (Fira Mono)</li>
+                    <li>Updated Electron to <code>12.1.0</code></li>
+                    <li>Removed the survey link from the home page, moved it to the Help menu/tab</li>
+                    <li>Added a documentation page for equations</li>
+                    <li>Added <code>Ctrl-1</code> through <code>Ctrl-6</code> keybindings for Headers</li>
+                    <li>You can now open the Chromium Dev Tools (<code>Ctrl-Shift-i</code>) to check for errors in the
+                        console</li>
+                    <li>Added custom horizontal scrollbars for code blocks</li>
+                    <li>Added a <em>word wrap</em> option for code blocks in the Settings page</li>
+                    <li>Made the custom scrollbars look better</li>
+                    <li>Redid the docs/Help pages</li>
+                    <li>The first-use tutorial has been removed, instead it asks if you want to see the &quot;Getting
+                        started&quot; help page</li>
+                    <li>If you are a macos user, code blocks and inline code should use Apple&#39;s <code>SF Mono</code>
+                        font</li>
+                    <li>Added a &quot;Toggle menu bar&quot; menu option on Linux (the menu bar doesn&#39;t follow
+                        dark/light mode)</li>
+                </ul>
+
+                <p class="card-text">Bug fixes:</p>
+                <ul>
+                    <li>Made the sidebar items in the Help tab responsive to sidebar resizing</li>
+                    <li>Fixed a bug where Ctrl-clicking or middle-clicking on link elements would open a new Codex
+                        window</li>
+                    <li><code>\n</code>&#39;s should now show up correctly in PDF&#39;s</li>
+                    <li>Fixed where when you make a new table you can&#39;t see the cursor inside it</li>
+                    <li>Disabled inserting horizontal rules and tables inside of tables/code blocks</li>
+                    <li>Fixed a bug where the content wouldn&#39;t expand to the full height of the window on Linux</li>
+                </ul>
+
+                <p class="card-text">Info for developers:</p>
+                <ul>
+                    <li>Added electron-builder to the devDependencies so it doesn&#39;t have to download every time you
+                        run <code>npx electron-builder</code></li>
+                </ul>
+
+                <p class="card-text"><a href="/download/">Download Codex 1.4.0</a></p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">September 5, 2021 (Windows, Linux)</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="card" id="1-3-1">
+            <div class="card-body">
+                <h5 class="card-title"><a href="#1-3-1">Version 1.3.1</a></h5>
+
+                <p class="card-text">Changes:</p>
+                <ul>
+                    <li>Updated a package that had a security vulnerability (Codex doesn't load any external content
+                        anyway, except for checking for updates, so it shouldn't have affected Codex users)</li>
+                    <li>Updated to Electron 12.0.11</li>
+                    <li>Added a link to an optional feedback survey on the home page</li>
+                </ul>
+
+                <p class="card-text"><a href="/download/">Download Codex 1.3.1</a></p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">June 13, 2021 (Windows, Linux)</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="card" id="1-3-0">
+            <div class="card-body">
+                <h5 class="card-title"><a href="#1-3-0">Version 1.3.0</a></h5>
+                <p class="card-text">New Features:</p>
+                <ul>
+                    <li>You can now set a custom Icon for each notebook<br>
+                        <img class="my-2" style="max-width: 411px; width: 100%" src="img/1-3-0/icons.png">
+                    </li>
+                    <li>Resizable and responsive sidebar that can be collapsed and opened even in small windows
+                        <video controls class="my-2" style="max-width: 414px; width: 100%">
+                            <source src="img/1-3-0/sidebar.mp4">
+                        </video>
+                    </li>
+                    <li>Redesigned home page</li>
+                    <li>Favorites section on home page</li>
+                    <li>Code blocks can now show the code block's language in the top-right<br>
+                        <img class="my-2" style="max-width: 790px; width: 100%" src="img/1-3-0/code.png">
+                    </li>
+                    <li>Added custom scrollbars to the sidebar and main window</li>
+                </ul>
+                <p class="card-text">Minor Changes:</p>
+                <ul>
+                    <li>Updated to Electron 12.0.8</li>
+                    <li>Switching pages now scrolls the page to the top as it should</li>
+                    <li>Made the "New notebook" and "Edit notebook" dialogs look better</li>
+                    <li>Made the buttons look much better</li>
+                    <li>Tweaked lots of misc. styles in light mode & dark mode</li>
+                    <li>Added a small shadow to images inside of notes</li>
+                </ul>
+                <p class="card-text">Fixes:</p>
+                <ul>
+                    <li>Zooming in & out on a page should keep your position better</li>
+                    <li>Fixed a light theme being inside the "dark themes" section</li>
+                    <li>Misc. bug fixes</li>
+                </ul>
+
+                <p class="card-text"><a href="/download/">Download Codex 1.3.0</a></p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">May 19, 2021 (Windows, Linux)</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="card" id="1-2-2">
+            <div class="card-body">
+                <h5 class="card-title"><a href="#1-2-2">Version 1.2.2</a></h5>
+                <p class="card-text">Changes:</p>
+                <ul>
+                    <li>Updated to Electron 12.0.2</li>
+                    <li>Enabled Spellcheck in the editor (not in code blocks)</li>
+                    <li>Reworked the look of the Settings page</li>
+                    <li>Added a Shift-Tab keybind when using code blocks</li>
+                    <li>Code blocks and inline code should look better</li>
+                    <li>Remade the About page</li>
+                    <li>The editor toolbar should now be more consistent and won't change size all the time</li>
+                    <li>Re-enabled the "Select parent node" button on the toolbar (this makes it easier to delete an
+                        entire code block)</li>
+                    <li>Made the editor toolbar a little less transparent</li>
+                    <li>Changed to the <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC
+                            4.0 License</a></li>
+                </ul>
+                <p class="card-text">Fixes:</p>
+                <ul>
+                    <li>Fixed the PDF background being broken</li>
+                    <li>Fixed the right-click context menus going off-screen</li>
+                    <li>Fixed the Rename Page button having the wrong text</li>
+                    <li>Fixed the issue where you couldn't center or right-align headings smaller than
+                        <code>&lt;h1&gt;</code></li>
+                    <li>Fixed the text being all white when selecting the parent node</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">April 7, 2021 (Windows, Linux)</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="card" id="1-2-1">
+            <div class="card-body">
+                <h5 class="card-title"><a href="#1-2-1">Version 1.2.1</a></h5>
+                <p class="card-text">Changes:</p>
+                <ul>
+                    <li>Fixed auto-indentation not working on code that has actual tab characters</li>
+                    <li><b>The behavior of writing Lists has been improved a lot</b></li>
+                    <li>Pressing Ctrl+U now enables Underline even if you don't have any text selected, just like bold
+                        and italics</li>
+                    <li>Added a macro for the R language, [r], and a menu item</li>
+                    <li>Fixed editor toolbar not being centered in a small window</li>
+                    <li>Fixed the spacing between list items</li>
+                    <li>Made the numbers in a numbered list bold</li>
+                    <li>The New Update popup now has a link to view the changelog</li>
+                    <li>Fixed some issues with the sidebar not coming back when you make the window bigger</li>
+                    <li>Made the editor toolbar a little less transparent</li>
+                    <li>Save indicator now shows above the editor toolbar</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">February 19, 2021 (Windows, Linux)</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="card" id="1-2-0">
+            <div class="card-body">
+                <h5 class="card-title"><a href="#1-2-0">Version 1.2.0</a></h5>
+                <p class="card-text">Changes:</p>
+                <ul>
+                    <li>Added an optional tutorial for first-time use.</li>
+                    <li><b>Code blocks now have auto-indentation</b>, meaning when you press enter it will tab the
+                        cursor out to match the last line's tabs.</li>
+                    <li>Added a setting for preferred tab size, either 2 or 4 spaces. This only applies for when you
+                        press tab in a code block, and won't affect existing code.</li>
+                    <li>Codex will now remember which notebooks were expanded/open when you re-open the program.</li>
+                    <li><b>Downloads will now be hosted on Dropbox for much better download speeds.</b></li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">January 4, 2021 (Windows, Linux)</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="card" id="1-1-1">
+            <div class="card-body">
+                <h5 class="card-title"><a href="#1-1-1">Version 1.1.1</a></h5>
+                <p class="card-text">Bug Fixes:</p>
+                <ul>
+                    <li><b>Fixed the "Change save directory" function not working</b></li>
+                </ul>
+                <p class="card-text">Changes:</p>
+                <ul>
+                    <li>You can now export PDF's with dark mode</li>
+                    <li>Added a setting for whether to open the created PDF after exporting</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">October 17, 2020 (Windows, Linux)</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="card" id="1-1-0">
+            <div class="card-body">
+                <h5 class="card-title"><a href="#1-1-0">Version 1.1.0</a></h5>
+                <p class="card-text">Changes:</p>
+                <ul>
+                    <li><b>You can now export pages to PDF</b></li>
+                    <li>You can now change the alignment of text</li>
+                    <li>Tables are now centered by default</li>
+                    <li>Added a "Revert to default" button for the accent color</li>
+                    <li>Cleaned up the Settings page</li>
+                    <li>Inline code should now be the correct font on Linux</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">October 12, 2020 (Windows, Linux)</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="card" id="1-0-1">
+            <div class="card-body">
+                <h5 class="card-title"><a href="#1-0-1">Version 1.0.1</a></h5>
+                <p class="card-text">Changes:</p>
+                <ul>
+                    <li>Tested on Linux (Ubuntu) and fixed issues</li>
+                    <li>Changed ordering of some editor toolbar items</li>
+                    <li>Added new in-software dialog to show when an update is available</li>
+                    <li>Added "System Default" option to the dark/light mode option</li>
+                    <li>Changed style of buttons in menus</li>
+                    <li>Added right-click context menu when writing notes</li>
+                </ul>
+                <p class="card-text">Known caveats:</p>
+                <ul>
+                    <li>On Linux distributions that use GTK, the menu bar will still show up light in Dark mode</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">September 27, 2020 (Windows, Linux)</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="card" id="1-0-0">
+            <div class="card-body">
+                <h5 class="card-title"><a href="#1-0-0">Version 1.0.0</a></h5>
+                <p class="card-text">Initial release (never really came out because of certificate issues)</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">~September 9, 2020 (Windows)</small>
+            </div>
+        </div>
+    </div>
 
     <!-- CONTENT -->
 

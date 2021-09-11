@@ -96,7 +96,6 @@ li {
         opacity: 0;
         -webkit-transform: translateY(-10px);
     }
-
     100% {
         opacity: 1;
         -webkit-transform: translateY(0);
@@ -108,7 +107,6 @@ li {
         opacity: 0;
         transform: translateY(-10px);
     }
-
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -118,4 +116,92 @@ li {
 .nav-link {
     display: block;
     padding: .5rem 1rem !important;
+}
+
+.os-glyph {
+    width: 24px;
+    height: 24px;
+    vertical-align: -6px;
+    margin-right: 0.2em;
+}
+
+.inline-code {
+    font-size: 13px;
+    font-weight: 600;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    border: 1px solid #00000030;
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+    word-wrap: break-word;
+    display: inline !important;
+}
+
+.version {
+    font-family: Consolas, monospace;
+    font-size: 13px;
+}
+
+.sum {
+    font-family: Consolas, monospace;
+    font-size: 13px;
+    vertical-align: 1px;
+}
+
+.sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.os-button {
+    padding: 10px 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 7px;
+    width: 145px;
+}
+
+.download-header {
+    background: rgb(147, 80, 147);
+    background: -moz-linear-gradient(36deg, rgba(147, 80, 147, 1) 10%, rgba(255, 122, 39, 1) 50%, rgba(255, 80, 39, 1) 90%);
+    background: -webkit-linear-gradient(36deg, rgba(147, 80, 147, 1) 10%, rgba(255, 122, 39, 1) 50%, rgba(255, 80, 39, 1) 90%);
+    background: linear-gradient(36deg, rgba(147, 80, 147, 1) 10%, rgba(255, 122, 39, 1) 50%, rgba(255, 80, 39, 1) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#935093", endColorstr="#ff5027", GradientType=1);
+    margin-bottom: 50px;
+}
+
+.dropdown-menu:before {
+    position: absolute;
+    top: -7px;
+    left: 25px;
+    display: inline-block;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #ccc;
+    border-left: 7px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    content: '';
+}
+
+.dropdown-menu:after {
+    position: absolute;
+    top: -6px;
+    left: 26px;
+    display: inline-block;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #ffffff;
+    border-left: 6px solid transparent;
+    content: '';
+}
+
+.dlCount {
+    display: inline-block;
+    width: 100%;
+    font-weight: 500;
+    background-color: #EDEDED;
+    border-radius: 4px;
+    padding: 5px 10px 5px 10px;
+    text-shadow: 2px 2px #00000020;
+    text-align: center;
 }

@@ -26,8 +26,13 @@
     <title>Codex - Note-taking for programmers</title>
 
     <style>
-        p {
-            margin-bottom: 2rem;
+        th,
+        td {
+            padding: 10px;
+        }
+
+        td {
+            font-size: 20px;
         }
     </style>
 </head>
@@ -68,65 +73,67 @@
 
     <!-- CONTENT -->
 
-    <div class="container">
-        <div class="jumbotron my-4">
-            <h1 class="display-4">Contact</h1>
-            <p>Please email <a href="mailto:support@codexnotes.com">support@codexnotes.com</a> with feedback,
-                suggestions, bug reports, and errors/crashes, or <a
-                    href="https://github.com/jcv8000/Codex/issues">create an Issue on the GitHub repository</a>.</p>
-        </div>
-    </div>
+    <div class="container my-5">
 
-    <div class="container">
-
-        <h1>Development History</h1>
-
-        <p>I started college last year, and I was using OneNote to take notes for my CS classes. It was pretty awkward
-            to put code examples into the notes. I'd have to either paste code in and just change the font to Consolas
-            (which would freeze the program for like 6 seconds) or paste in a screenshot if I wanted to get some color
-            in there.</p>
-
-        <p>So I decided to try to make my own note-taking software to use that would make it easy to put code in, and
-            make it look nice.</p>
-
-        <p>At first, I decided to make the program in C# with WinForms, because C# is the language that I'm most
-            familiar with and I assumed that winforms was cross-platform (I was very wrong).</p>
-
+        <h2 class="my-5">GitHub Download Stats</h2>
         <center>
-            <img src="img/old.png" class="shadow mt-3 mb-5" style="border-radius: 4px; width: 100%">
+            <table id="githubDownloadTable">
+                <tr>
+                    <th>File</th>
+                    <th>Downloads</th>
+                </tr>
+            </table>
         </center>
 
-        <p>This is what came out of it (looks like garbage). The idea was that you would type your notes into the
-            textbox on the left, and it would render that into an HTML page with the code highlighted on the right.</p>
-
-        <p>This version of the program would make a whole folder for each notebook, a subfolder for each section, and
-            finally a text file for each page. That was an incredibly stupid idea, because you couldn't have certain
-            characters that aren't allowed in directory names, and you couldn't have two of anything with the same name.
-        </p>
-
-        <p>So then I rewrote the whole thing to make the notebooks/sections/pages into C# classes that were serialized
-            to 1 file, which was a lot better.</p>
-
-        <p>This actually worked for a few weeks for taking notes in class, even though the two-panel design was a really
-            stupid and ugly idea.</p>
-
-        <p>A few weeks later I decided that the program was utter trash, and decided to rewrite it a second time. That
-            was when I realized that winforms was not cross platform at all. So I spent about 3 days searching the
-            internet for a cross-platform GUI library type thing. I also wanted to make it a 'WYSIWYG' editor because
-            having a separate panel for text and another panel for the rendered page is really ugly.</p>
-
-        <p>I finally settled on Electron, and after a few days of working on the project I was already amazed at how
-            much better it looks than anything that I could ever make in WinForms.</p>
-
-        <center>
-            <img src="img/sql.png" class="shadow mt-3 mb-5" style="border-radius: 4px; width: 100%">
-        </center>
-
-        <p>I think it's hilarious how much the look of the program has improved since I switched from winforms to
-            Electron. I think I'm finally satisfied with how the program looks and functions, and I hope that someone
-            else will find this software useful for whatever they're doing.</p>
-
     </div>
+
+    <script>
+        var owner = 'jcv8000';
+        var repo = 'Codex';
+
+        function addTableEl(lhs, rhs, border = false) {
+            let tr = document.createElement('tr');
+            let name = document.createElement('td');
+            name.textContent = lhs;
+            tr.appendChild(name);
+            let count = document.createElement('td');
+            let num = document.createElement('span');
+            num.className = "dlCount";
+            num.textContent = rhs;
+            count.appendChild(num);
+            tr.appendChild(count);
+
+            if (border === true) {
+                tr.style.borderTop = "1px solid #ededed";
+            }
+
+            document.getElementById('githubDownloadTable').appendChild(tr);
+        }
+
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', function () {
+            const releases = JSON.parse(this.responseText);
+
+            let total = 0;
+
+            for (let r = 0; r < releases.length; r++) {
+                let release = releases[r];
+
+                for (let a = 0; a < release.assets.length; a++) {
+                    let asset = release.assets[a];
+
+                    addTableEl(asset.name, asset.download_count);
+
+                    total += asset.download_count;
+                }
+            }
+
+            addTableEl("Total", total, true);
+
+        });
+        xhr.open('GET', 'https://api.github.com/repos/' + owner + '/' + repo + '/releases');
+        xhr.send();
+    </script>
 
     <!-- CONTENT -->
 

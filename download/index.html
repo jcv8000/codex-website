@@ -62,7 +62,165 @@
 
     <!-- CONTENT -->
 
+    <div class="container-fluid download-header fade-in" style="padding-top: 25px; padding-bottom: 25px;">
+        <div>
+            <center>
+                <img src="/img/logo-shadow.png" style="max-width: 525px; width: 100%;"><br>
+            </center>
+        </div>
+        <center>
+            <p class="sidebar-heading" style="color: #f8f9fa"><b>DOWNLOAD FOR:</b></p>
 
+            <div class="container" style="max-width: 480px">
+
+                <div class="row">
+                    <div class="col-md p-0 my-2">
+                        <span class="dropdown">
+                            <button class="btn2 os-button dropdown-toggle" type="button" id="windowsDropdownButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="https://img.icons8.com/metro/52/ffffff/windows-logo.png" class="os-glyph">
+                                Windows
+                            </button>
+                            <div class="dropdown-menu shadow" aria-labelledby="windowsDropdownButton">
+                                <a class="dropdown-item" href="https://github.com/jcv8000/Codex/releases/download/v1.4.1/Codex-Setup-1.4.1.exe">Installer
+                                    (Codex-Setup-1.4.1.exe)</a>
+                                <a class="dropdown-item" href="https://github.com/jcv8000/Codex/releases/download/v1.4.1/Codex-1.4.1-win.zip">Portable
+                                    (Codex-1.4.1-win.zip)</a>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="col-md p-0 my-2">
+                        <span class="dropdown">
+                            <button class="btn2 os-button dropdown-toggle" type="button" id="linuxDropdownButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="https://img.icons8.com/ios-filled/50/ffffff/linux.png" class="os-glyph">
+                                Linux
+                            </button>
+                            <div class="dropdown-menu shadow" aria-labelledby="linuxDropdownButton">
+                                <a class="dropdown-item" href="https://github.com/jcv8000/Codex/releases/download/v1.4.1/Codex-1.4.1.deb">Debian Installer
+                                    (Codex-1.4.1.deb)</a>
+                                <a class="dropdown-item" href="https://github.com/jcv8000/Codex/releases/download/v1.4.1/Codex-1.4.1.tar.xz">Portable
+                                    (Codex-1.4.1.tar.xz)</a>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="col-md p-0 my-2">
+                        <span class="dropdown">
+                            <button class="btn2 os-button dropdown-toggle" type="button" id="macDropdownButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="https://img.icons8.com/metro/26/ffffff/mac-os.png" class="os-glyph">
+                                macOS
+                            </button>
+                            <div class="dropdown-menu shadow" aria-labelledby="macDropdownButton">
+                                <a class="dropdown-item" href="https://github.com/jcv8000/Codex" target="_blank"><img
+                                        class="mx-1" src="/img/GitHub-Mark-32px.png" alt=""
+                                        style="vertical-align: -2px;" width="16" height="16">Build locally from
+                                    GitHub</a>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <a class="navbar-link" href="/updates/#1-4-1">Version 1.4.1</a>
+
+        </center>
+    </div>
+
+    <div class="container fade-in">
+
+
+        <div class="alert alert-success" role="alert">
+            <h2>Thank you for trying Codex!</h2>
+            If you have any issues or feedback for Codex, feel free to email <a
+                href="mailto:support@codexnotes.com">support@codexnotes.com</a>, or create an Issue/Discussion on the
+            GitHub repository.
+        </div>
+
+        <div class="my-5" id="building-locally">
+            <h2>Building Locally</h2><br>
+            <p>You can build the project locally from the <a href="https://github.com/jcv8000/Codex"
+                    target="_blank"><img class="mx-1" src="/img/GitHub-Mark-32px.png" alt=""
+                        style="vertical-align: -2px;" width="16" height="16">GitHub repository</a> if you want to make a
+                change to the program, build for macOS, or
+                if
+                you just feel safer compiling it yourself.</p>
+            <p><b>Steps:</b></p>
+            <ol>
+                <li>Clone the respoitory with a git client, or download the source code ZIP from GitHub and extract it.
+                </li>
+                <li>Make sure you have <a href="https://nodejs.org/en/" target="_blank">NodeJS</a> and npm (Node's
+                    package
+                    manager)
+                    installed.
+                </li>
+                <li>In the project's root folder, run <span class="inline-code">npm install</span> to download the
+                    required
+                    dependencies.</li>
+                <li>Run <span class="inline-code">npx electron-builder</span> to compile the program. Any output should
+                    go
+                    in
+                    the <span class="inline-code">dist</span> folder.</li>
+            </ol>
+            <p>The <span class="inline-code">package.json</span> file defines what types of files to output when
+                building
+                the application based on your platform in the <span class="inline-code">"build"</span> section. By
+                default,
+                it will build to: NSIS installer (exe) and portable zip for Windows; Debian installer (deb) and portable
+                tar.xf for Linux; DMG file for macOS. <b>Building on macOS has not been tested yet.</b></p>
+            <p>Learn more about the Electron Builder configuration <a
+                    href="https://www.electron.build/configuration/configuration" target="_blank">here</a>.</p>
+            <p>If you build the program locally, it will not show "Joshua Vickery" as the Verified Publisher.</p>
+        </div>
+
+        <div class="my-5" id="verifying">
+            <h2>Verifying Downloads</h2><br>
+            <p>MD5 Sums:</p>
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">File</th>
+                        <th scope="col">MD5 Sum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="sum">Codex-Setup-1.4.1.exe</span></td>
+                        <td><span class="sum">A75A0CB8EE692181DB6D0113009A2FC4</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="sum">Codex-1.4.1-win.zip</span></td>
+                        <td><span class="sum">6A7B61B476FCD3AF1F8954CD489096A4</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="sum">Codex-1.4.1.deb</span></td>
+                        <td><span class="sum">C86957A2E73930A577CE6FD716BEFAE6</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="sum">Codex-1.4.1.tar.xz</span></td>
+                        <td><span class="sum">855D02EF27B2A530E28BD97BD8266099</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="my-5" id="linux-distros">
+            <h2>Linux Distributions</h2><br>
+            <p>The portable <span class="inline-code">tar.xz</span> file <i>should</i> work on most Linux distributions.
+            </p>
+            <p>Codex has been tested on the following distros:</p>
+            <ul>
+                <li>Ubuntu 20.04</li>
+                <li>Manjaro XFCE 21.0.3</li>
+                <li>Arch Linux</li>
+            </ul>
+            <p>Please create an issue on GitHub if Codex does not work on your distribution.</p>
+
+        </div>
+
+    </div>
 
     <!-- CONTENT -->
 
