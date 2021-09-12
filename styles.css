@@ -129,23 +129,24 @@ li {
     font-size: 13px;
     font-weight: 600;
     padding-top: 2px !important;
-    padding-bottom: 2px !important;
+    padding-bottom: 3px !important;
     padding-left: 4px !important;
     padding-right: 4px !important;
     border: 1px solid #00000030;
     border-radius: 4px;
-    font-family: Consolas, monospace;
+    font-family: var(--font-family-monospace);
     word-wrap: break-word;
     display: inline !important;
+    background-color: #ffffff;
 }
 
 .version {
-    font-family: Consolas, monospace;
+    font-family: var(--font-family-monospace);
     font-size: 13px;
 }
 
 .sum {
-    font-family: Consolas, monospace;
+    font-family: var(--font-family-monospace);
     font-size: 13px;
     vertical-align: 1px;
 }
@@ -204,4 +205,69 @@ li {
     padding: 5px 10px 5px 10px;
     text-shadow: 2px 2px #00000020;
     text-align: center;
+}
+
+.key-symbol {
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    border: 1px solid #00000030;
+    border-radius: 4px;
+    word-wrap: break-word;
+    display: inline !important;
+    background: white;
+    color: #333333;
+    box-shadow: 0px 2px 0px 0px #b5b4b4;
+    font-family: var(--font-family-monospace);
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100% !important;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+table, th, td {
+    border: 1px solid #C9C9C9;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #EDEDED;
+}
+
+tr:nth-child(odd) {
+    background-color: #F8F9FA;
+}
+
+.codeSnippet {
+    background-color: #282c34;
+    color: #abb2bf;
+    padding: 0.5em;
+    border: 1px solid #00000030;
+    border-radius: 5px;
+    font-family: var(--font-family-monospace);
+    min-height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    white-space: pre-line;
+    font-size: 14px;
+    line-height: 1.5;
+    position: static;
+}
+
+.docVideo {
+    width: 75%;
+    max-width: 100%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

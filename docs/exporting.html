@@ -65,7 +65,7 @@
     <div class="container my-4">
         <ul class="nav nav-pills nav-fill mb-5">
             <li class="nav-item">
-                <a class="nav-link active" href="/docs/">Getting Started</a>
+                <a class="nav-link" href="/docs/">Getting Started</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/docs/basicediting.html">Basic editing</a>
@@ -77,7 +77,7 @@
                 <a class="nav-link" href="/docs/keybinds.html">Keybinds and Macros</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/docs/exporting.html">Exporting</a>
+                <a class="nav-link active" href="/docs/exporting.html">Exporting</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/docs/cloudsyncing.html">Cloud Syncing</a>
@@ -85,36 +85,57 @@
         </ul>
 
 
-        <h1>Getting Started</h1>
+        <h1>Exporting Help</h1><br>
+
+        <p>You can export your notes to PDF or Markdown by right-clicking on the page and choosing Export, from the File
+            menu, or you can export an entire notebook to one of the two formats.</p>
+
         <br>
 
-        <p>Create a notebook by clicking the <span data-feather="plus-circle" style="width: 18px; height: 18px;"></span>
-            icon next to "<span class="sidebar-heading" style="font-weight: 500; line-height: 1.2;">NOTEBOOKS</span>" on
-            the sidebar, or by pressing <span class="key-symbol">Ctrl</span>+<span class="key-symbol">N</span><br>
-            Then right-click on the notebook and choose "New Page".</p><br>
+        <h3>PDFs</h3>
 
-        <video src="img/getting-started.mp4" class="docVideo" controls muted></video>
+        <p>If you export a page to a PDF and your images/equations are not showing up, try exporting it again.</p>
 
-        <br><br>
-        <p>From there you can start writing your notes.</p><br>
+        <br>
 
-        <h2>Other Useful Information</h2><br>
+        <h3>Markdown</h3>
 
-        <ul style="line-height: 24px;">
-            <li class="mb-3">Codex automatically saves pages when you switch to another page, and when you exit the
-                program. You can manually save by pressing <span class="key-symbol">Ctrl</span>+<span
-                    class="key-symbol">S</span></li>
-            <li class="mb-3">Codex also automatically checks for updates when you open the program.</li>
-            <li class="mb-3">The sidebar can be resized, and can be toggled by using the <span
-                    data-feather="chevrons-left" style="width: 18px; height: 18px;"></span> button, with (View > Toggle
-                Sidebar) or <span class="key-symbol">Ctrl</span>+<span class="key-symbol">D</span></li>
-            <li class="mb-3">While editing notes, you can zoom in/out with <span class="key-symbol">Ctrl</span>+<span
-                    class="key-symbol">+</span> and <span class="key-symbol">Ctrl</span>+<span
-                    class="key-symbol">-</span> or (View > Zoom in/out).</li>
-            <li class="mb-3">If it seems like something isnt working right, check the Developer Console for errors by
-                pressing <span class="key-symbol">Ctrl</span>+<span class="key-symbol">Shift</span>+<span
-                    class="key-symbol">I</span> or going to (View > Toggle Developer Tools)</li>
-        </ul>
+        <p>Some flavors of Markdown support different features than others.</p>
+
+        <p>The exported markdown should be compatible everywhere except for Tables, KaTeX equations, and
+            centered/right-aligned text/images. Tables are converted to the <a href="https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown" target="_blank">GitHub
+                Markdown style</a> and follow this structure:</p>
+
+        <div class="codeSnippet">First Header | Second Header
+            ------------ | -------------
+            Content from cell 1 | Content from cell 2
+            Content in the first column | Content in the second column</div>
+
+        <br>
+
+        <p>The KaTeX inline equations are formatted as <span class="hljs inline-code">$equation$</span> and the block
+            equations are formatted as:</p>
+
+        <div class="codeSnippet">$$
+            equation
+            $$</div>
+
+        <br>
+
+        <p>Any text/images that has been right/center-aligned in your notes will be wrapped with<br>
+            <span class="hljs inline-code">&lt;p align='center'&gt;text&lt;p&gt;</span>
+            which might not work on sites other than GitHub.
+        </p>
+
+        <br>
+
+        <p>Images that have their data encoded directly in the document (such as screenshots that you paste in) will not
+            be included in the Markdown file. It has to have a URL source.</p>
+
+        <br>
+
+        <p>So you may have to edit the Markdown file after exporting to make it follow the Markdown format of whatever
+            website/software you're using it in.</p>
 
 
     </div>

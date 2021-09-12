@@ -65,7 +65,7 @@
     <div class="container my-4">
         <ul class="nav nav-pills nav-fill mb-5">
             <li class="nav-item">
-                <a class="nav-link active" href="/docs/">Getting Started</a>
+                <a class="nav-link" href="/docs/">Getting Started</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/docs/basicediting.html">Basic editing</a>
@@ -80,41 +80,38 @@
                 <a class="nav-link" href="/docs/exporting.html">Exporting</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/docs/cloudsyncing.html">Cloud Syncing</a>
+                <a class="nav-link active" href="/docs/cloudsyncing.html">Cloud Syncing</a>
             </li>
         </ul>
 
 
-        <h1>Getting Started</h1>
+        <h1>Cloud Syncing with Codex</h1>
         <br>
-
-        <p>Create a notebook by clicking the <span data-feather="plus-circle" style="width: 18px; height: 18px;"></span>
-            icon next to "<span class="sidebar-heading" style="font-weight: 500; line-height: 1.2;">NOTEBOOKS</span>" on
-            the sidebar, or by pressing <span class="key-symbol">Ctrl</span>+<span class="key-symbol">N</span><br>
-            Then right-click on the notebook and choose "New Page".</p><br>
-
-        <video src="img/getting-started.mp4" class="docVideo" controls muted></video>
-
+        <p>You can choose to sync your notes between multiple computers with a service like iCloud, OneDrive, Dropbox,
+            etc. very easily.</p>
+        <p>You must have the cloud software installed on your computer and preferrably have a synced drive folder that
+            you use.</p>
         <br><br>
-        <p>From there you can start writing your notes.</p><br>
-
-        <h2>Other Useful Information</h2><br>
-
-        <ul style="line-height: 24px;">
-            <li class="mb-3">Codex automatically saves pages when you switch to another page, and when you exit the
-                program. You can manually save by pressing <span class="key-symbol">Ctrl</span>+<span
-                    class="key-symbol">S</span></li>
-            <li class="mb-3">Codex also automatically checks for updates when you open the program.</li>
-            <li class="mb-3">The sidebar can be resized, and can be toggled by using the <span
-                    data-feather="chevrons-left" style="width: 18px; height: 18px;"></span> button, with (View > Toggle
-                Sidebar) or <span class="key-symbol">Ctrl</span>+<span class="key-symbol">D</span></li>
-            <li class="mb-3">While editing notes, you can zoom in/out with <span class="key-symbol">Ctrl</span>+<span
-                    class="key-symbol">+</span> and <span class="key-symbol">Ctrl</span>+<span
-                    class="key-symbol">-</span> or (View > Zoom in/out).</li>
-            <li class="mb-3">If it seems like something isnt working right, check the Developer Console for errors by
-                pressing <span class="key-symbol">Ctrl</span>+<span class="key-symbol">Shift</span>+<span
-                    class="key-symbol">I</span> or going to (View > Toggle Developer Tools)</li>
-        </ul>
+        <b>To sync your notes, first do this on the computer that currently has your notes:</b>
+        <ol style="line-height: 36px;">
+            <li>Create an empty folder (named something like Codex to remember where it is) in the synced drive.</li>
+            <li>Go to the Settings tab on the left and find the "Change save directory" setting.</li>
+            <li>Click the "folder" button on the right side to select the folder you created in the synced drive.</li>
+            <li>Codex will restart, and there should be no notebooks in the Notebooks section in the side menu.</li>
+            <li>If you hover over the "Revert to default save directory" button it will tell you where your notes are
+                stored.</li>
+            <li>Navigate to that location on your computer, and copy the <code>save.json</code> file and the
+                <code>notes</code> folder.</li>
+            <li>Paste those into the new Codex folder you created in the synced drive.</li>
+            <li>Restart Codex, and your notebooks and notes should appear in the side menu.</li>
+        </ol>
+        <br>
+        <b>Next, do this on any other computer where you want to have your notes available:</b>
+        <ol style="line-height: 36px;">
+            <li>Make sure that same cloud software is installed and synced.</li>
+            <li>Go to the Settings tab and change the Save Directory to that synced Codex folder.</li>
+            <li>Codex will restart, and all your notes should appear in the side menu.</li>
+        </ol>
 
 
     </div>
