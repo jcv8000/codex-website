@@ -30,10 +30,6 @@
         td {
             padding: 10px;
         }
-
-        td {
-            font-size: 20px;
-        }
     </style>
 </head>
 
@@ -77,7 +73,7 @@
 
         <h2 class="my-5">GitHub Download Stats</h2>
         <center>
-            <table id="githubDownloadTable">
+            <table id="githubDownloadTable" class="table-bordered table-striped" style="font-family: var(--font-family-monospace); font-size: 14px;">
                 <tr>
                     <th>File</th>
                     <th>Downloads</th>
@@ -91,21 +87,17 @@
         var owner = 'jcv8000';
         var repo = 'Codex';
 
-        function addTableEl(lhs, rhs, border = false) {
+        function addTableEl(lhs, rhs) {
             let tr = document.createElement('tr');
             let name = document.createElement('td');
             name.textContent = lhs;
             tr.appendChild(name);
             let count = document.createElement('td');
             let num = document.createElement('span');
-            num.className = "dlCount";
+            //num.className = "dlCount";
             num.textContent = rhs;
             count.appendChild(num);
             tr.appendChild(count);
-
-            if (border === true) {
-                tr.style.borderTop = "1px solid #ededed";
-            }
 
             document.getElementById('githubDownloadTable').appendChild(tr);
         }
@@ -128,7 +120,7 @@
                 }
             }
 
-            addTableEl("Total", total, true);
+            addTableEl("Total", total);
 
         });
         xhr.open('GET', 'https://api.github.com/repos/' + owner + '/' + repo + '/releases');
