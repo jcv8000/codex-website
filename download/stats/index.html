@@ -69,63 +69,29 @@
 
     <!-- CONTENT -->
 
-    <div class="container my-5">
+    <div class="mx-5">
 
-        <h2 class="my-5">GitHub Download Stats</h2>
+
         <center>
-            <table id="githubDownloadTable" class="table-bordered table-striped" style="font-family: var(--font-family-monospace); font-size: 14px;">
-                <tr>
-                    <th>File</th>
-                    <th>Downloads</th>
-                </tr>
-            </table>
+            <h2 class="my-5">GitHub Download Stats</h2>
         </center>
 
+        <div class="row">
+            <div class="col-auto">
+                <table id="githubDownloadTable" class="table-bordered table-striped"
+                    style="font-family: var(--font-family-monospace); font-size: 14px;">
+                    <tr>
+                        <th>File</th>
+                        <th>Downloads</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="col">
+                <div id="graph"></div>
+            </div>
+        </div>
+
     </div>
-
-    <script>
-        var owner = 'jcv8000';
-        var repo = 'Codex';
-
-        function addTableEl(lhs, rhs) {
-            let tr = document.createElement('tr');
-            let name = document.createElement('td');
-            name.textContent = lhs;
-            tr.appendChild(name);
-            let count = document.createElement('td');
-            let num = document.createElement('span');
-            //num.className = "dlCount";
-            num.textContent = rhs;
-            count.appendChild(num);
-            tr.appendChild(count);
-
-            document.getElementById('githubDownloadTable').appendChild(tr);
-        }
-
-        var xhr = new XMLHttpRequest();
-        xhr.addEventListener('load', function () {
-            const releases = JSON.parse(this.responseText);
-
-            let total = 0;
-
-            for (let r = 0; r < releases.length; r++) {
-                let release = releases[r];
-
-                for (let a = 0; a < release.assets.length; a++) {
-                    let asset = release.assets[a];
-
-                    addTableEl(asset.name, asset.download_count);
-
-                    total += asset.download_count;
-                }
-            }
-
-            addTableEl("Total", total);
-
-        });
-        xhr.open('GET', 'https://api.github.com/repos/' + owner + '/' + repo + '/releases');
-        xhr.send();
-    </script>
 
     <!-- CONTENT -->
 
@@ -154,6 +120,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
+
+    <script src="stats.js"></script>
+
+    <script src="https://cdn.plot.ly/plotly-2.4.2.min.js"></script>
 </body>
 
 </html>
