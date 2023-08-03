@@ -1,60 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicons -->
+        <link
+            rel="icon"
+            href="https://www.codexnotes.com/favicon.png?v=3"
+            type="image/png"
+            sizes="16x16 32x32"
+        />
 
-    <!-- Favicons -->
-    <link rel="icon" href="https://www.codexnotes.com/favicon.png?v=3" type="image/png" sizes="16x16 32x32">
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+            crossorigin="anonymous"
+        />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link href="/styles.css" rel="stylesheet" />
 
-    <link href="/styles.css" rel="stylesheet">
+        <title>Codex - Note-taking for programmers</title>
+    </head>
 
-    <title>Codex - Note-taking for programmers</title>
-</head>
+    <body>
+        <nav
+            class="navbar navbar-expand-sm navbar-dark bg-dark"
+            style="background-color: #343a40"
+        >
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarToggler"
+                aria-controls="navbarToggler"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-<body>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link navbar-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link navbar-link"
+                            href="https://github.com/jcv8000/Codex/releases"
+                            >Download</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-link" href="/docs/"
+                            >Help/Docs</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-link" href="/updates/"
+                            >Changelog</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-link" href="/about/">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link navbar-link"
+                            href="https://github.com/jcv8000/Codex"
+                            target="_blank"
+                            ><img
+                                class="mx-1"
+                                style="vertical-align: -3px"
+                                src="/img/GitHub-Mark-Light-32px.png"
+                                alt=""
+                                width="16"
+                                height="16"
+                            />GitHub</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark" style="background-color: #343A40;">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
-            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <!-- CONTENT -->
 
-        <div class="collapse navbar-collapse" id="navbarToggler">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link navbar-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link navbar-link" href="/download/">Download</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link navbar-link" href="/docs/">Help/Docs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link navbar-link" href="/updates/">Changelog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link navbar-link" href="/about/">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link navbar-link" href="https://github.com/jcv8000/Codex" target="_blank"><img
-                            class="mx-1" style="vertical-align:-3px" src="/img/GitHub-Mark-Light-32px.png" alt=""
-                            width="16" height="16">GitHub</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- CONTENT -->
-
-    <!-- <div class="container fade-in">
+        <!-- <div class="container fade-in">
         <div class="alert alert-success mt-3 shadow-sm" style="margin-left: auto; margin-right: auto" role="alert">
             <div class="mb-3">
                 <h4 style="display: inline">Version 1.4.1 Released</h4>
@@ -64,170 +99,262 @@
         </div>
     </div> -->
 
-    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center fade-in">
-
-        <img src="/img/logo.png" id="logo" style="width: 600px">
-
-        <p class="lead">A free, simple, and customizable note-taking software for programmers and Computer Science
-            students.</p>
-        <p class="lead" style="font-size: 16px">Currently for Windows and Linux</p><br>
-
-        <a href="/download/" class="btn2">Download Codex 1.4.2</a><br><br>
-
-        <a href="https://github.com/jcv8000/Codex"><img src="/img/GitHub-Mark-32px.png" alt="" width="20" height="20"
-                style="vertical-align: -4px;"> View on GitHub</a>
-
-        <br><br>
-
-
-        <img src="/img/main2.png" class="mainImg shadow my-3" style="border-radius: 4px">
-        <br>
-
-    </div>
-
-
-    <div class="container my-2 fade-in">
-
-        <center>
-            <h1>About</h1>
-        </center>
-        <p class="lead my-5">I'm a Computer Science student, and about a year ago I started taking notes on my laptop.
-            Most note-taking programs (such as OneNote) don't have very good support for writing code examples inside
-            your notes. I would have to either have to settle on having boring white code, or paste in a picture of the
-            code (not very quick or pretty). So I decided to write my own note-taking program to make it simple and
-            visually-appealing to write code.</p>
-
-        <center>
-            <h1>Features</h1>
-        </center>
-    </div>
-
-    <div class="container my-2 mt-5 fade-in">
-        <div class="row">
-            <div class="col my-3">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h4 class="card-title">Full-featured note-taker</h4>
-                        <p class="card-text">Aside from writing beautiful code blocks, Codex has the other styling tools
-                            that you could expect, such as tables, inline code, links, images, headers, and block
-                            quotes. All pages get saved automatically when you switch pages or exit the program.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 my-3">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h4 class="card-title">Automatic code highlighting</h4>
-                        <p class="card-text">Code automatically highlights and colors as you type, based on your
-                            selected code style.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 my-3">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h4 class="card-title">Support for tons of programming languages</h4>
-                        <p class="card-text">If the programming language you take notes on is not shown, you can select
-                            "Other" and it will still be automatically highlighted.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 my-3">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h4 class="card-title">Cloud syncing</h4>
-                        <p class="card-text">You can sync your notes between computers using a third-party Cloud
-                            software like Dropbox, iCloud, etc. by changing the save location of your notes to that
-                            Cloud software's synced drive.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 my-3">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h4 class="card-title">Lots of beautiful code themes</h4>
-                        <p class="card-text">You can switch between over 100 different code themes. (My favorites are
-                            the Github theme and the Atom One Dark theme)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 my-3">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h4 class="card-title">Code Macros</h4>
-                        <p class="card-text">You can type macros like
-                            <code>[cpp]</code> to make a C++ code block or <code>[js]</code> to make a JavaScript
-                            block.<br>
-                            <a href="/docs/keybinds.html#code-macros">View all code macros</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 my-3">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h4 class="card-title">Equations</h4>
-                        <p class="card-text">Codex supports inline and block KaTeX equations in your notes. <a
-                                href="/docs/equations.html">Learn more here.</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mb-5">
-            <div class="col my-3">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h4 class="card-title">Export notes to PDF and Markdown</h4>
-                        <p class="card-text">As of version 1.1.0, you can export pages to PDF, and it'll keep the same
-                            code style you have selected.<br><a href="/img/examplepdf.pdf">See example PDF</a></p>
-                    </div>
+        <div class="container fade-in">
+            <div
+                class="alert alert-success mt-3 shadow-sm"
+                style="margin-left: auto; margin-right: auto"
+                role="alert"
+            >
+                <div>
+                    <h4>Version 2.0.0-beta.0 Released</h4>
+                    <a href="https://github.com/jcv8000/Codex/releases"
+                        >Download now</a
+                    >
                 </div>
             </div>
         </div>
 
-    </div>
+        <div
+            class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center fade-in"
+        >
+            <img src="/img/logo.png" id="logo" style="width: 600px" />
 
-    <div class="pricing-header mb-4 mx-auto text-center fade-in">
-        <h4 class="fade-in">Dark Mode</h4>
-        <img src="/img/darkmode2.png" class="mainImg shadow my-3" style="border-radius: 4px">
-    </div>
+            <p class="lead">
+                A free, simple, and customizable note-taking software for
+                programmers and Computer Science students.
+            </p>
+            <p class="lead" style="font-size: 16px">
+                Currently for Windows and Linux
+            </p>
+            <br />
 
-    <center><small class="text-muted">Made by Josh Vickery</small></center>
+            <a href="https://github.com/jcv8000/Codex/releases" class="btn2"
+                >Download Codex 2.0.0-beta.0</a
+            ><br /><br />
 
-    <!-- CONTENT -->
+            <a href="https://github.com/jcv8000/Codex"
+                ><img
+                    src="/img/GitHub-Mark-32px.png"
+                    alt=""
+                    width="20"
+                    height="20"
+                    style="vertical-align: -4px"
+                />
+                View on GitHub</a
+            >
 
-    <div class="container">
-        <footer class="my-3 pt-md-3 border-top">
+            <br /><br />
+
+            <img
+                src="/img/main2.png"
+                class="mainImg shadow my-3"
+                style="border-radius: 4px"
+            />
+            <br />
+        </div>
+
+        <div class="container my-2 fade-in">
             <center>
-                <small xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#"
-                    class="license-text text-muted"><span rel="dct:title">Codex (software)</span> is licensed under a <a
-                        rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
-                    license.</small>
-                <br><br>
-                <img class="mb-2" src="https://www.codexnotes.com/favicon.png?v=3" alt="" width="16" height="16"
-                    style="vertical-align: -7px;"> <small class="text-muted" style="vertical-align: top">&copy; 2020 -
-                    2022
-                </small>
-
+                <h1>About</h1>
             </center>
-        </footer>
+            <p class="lead my-5">
+                I'm a Computer Science student, and about a year ago I started
+                taking notes on my laptop. Most note-taking programs (such as
+                OneNote) don't have very good support for writing code examples
+                inside your notes. I would have to either have to settle on
+                having boring white code, or paste in a picture of the code (not
+                very quick or pretty). So I decided to write my own note-taking
+                program to make it simple and visually-appealing to write code.
+            </p>
 
-    </div>
+            <center>
+                <h1>Features</h1>
+            </center>
+        </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+        <div class="container my-2 mt-5 fade-in">
+            <div class="row">
+                <div class="col my-3">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title">Full-featured note-taker</h4>
+                            <p class="card-text">
+                                Aside from writing beautiful code blocks, Codex
+                                has the other styling tools that you could
+                                expect, such as tables, inline code, links,
+                                images, headers, and block quotes. All pages get
+                                saved automatically when you switch pages or
+                                exit the program.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 my-3">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                Automatic code highlighting
+                            </h4>
+                            <p class="card-text">
+                                Code automatically highlights and colors as you
+                                type, based on your selected code style.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 my-3">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                Support for tons of programming languages
+                            </h4>
+                            <p class="card-text">
+                                If the programming language you take notes on is
+                                not shown, you can select "Other" and it will
+                                still be automatically highlighted.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 my-3">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title">Cloud syncing</h4>
+                            <p class="card-text">
+                                You can sync your notes between computers using
+                                a third-party Cloud software like Dropbox,
+                                iCloud, etc. by changing the save location of
+                                your notes to that Cloud software's synced
+                                drive.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 my-3">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                Lots of beautiful code themes
+                            </h4>
+                            <p class="card-text">
+                                You can switch between over 100 different code
+                                themes. (My favorites are the Github theme and
+                                the Atom One Dark theme)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 my-3">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title">Code Macros</h4>
+                            <p class="card-text">
+                                You can type macros like <code>[cpp]</code> to
+                                make a C++ code block or <code>[js]</code> to
+                                make a JavaScript block.<br />
+                                <a href="/docs/keybinds.html#code-macros"
+                                    >View all code macros</a
+                                >
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 my-3">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title">Equations</h4>
+                            <p class="card-text">
+                                Codex supports inline and block KaTeX equations
+                                in your notes.
+                                <a href="/docs/equations.html"
+                                    >Learn more here.</a
+                                >
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col my-3">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                Export notes to PDF and Markdown
+                            </h4>
+                            <p class="card-text">
+                                As of version 1.1.0, you can export pages to
+                                PDF, and it'll keep the same code style you have
+                                selected.<br /><a href="/img/examplepdf.pdf"
+                                    >See example PDF</a
+                                >
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-        crossorigin="anonymous"></script>
-</body>
+        <div class="pricing-header mb-4 mx-auto text-center fade-in">
+            <h4 class="fade-in">Dark Mode</h4>
+            <img
+                src="/img/darkmode2.png"
+                class="mainImg shadow my-3"
+                style="border-radius: 4px"
+            />
+        </div>
 
+        <center><small class="text-muted">Made by Josh Vickery</small></center>
+
+        <!-- CONTENT -->
+
+        <div class="container">
+            <footer class="my-3 pt-md-3 border-top">
+                <center>
+                    <small
+                        xmlns:dct="http://purl.org/dc/terms/"
+                        xmlns:cc="http://creativecommons.org/ns#"
+                        class="license-text text-muted"
+                        ><span rel="dct:title">Codex (software)</span> is
+                        licensed under a
+                        <a
+                            rel="license"
+                            href="https://creativecommons.org/licenses/by-nc/4.0/"
+                            >CC BY-NC 4.0</a
+                        >
+                        license.</small
+                    >
+                    <br /><br />
+                    <img
+                        class="mb-2"
+                        src="https://www.codexnotes.com/favicon.png?v=3"
+                        alt=""
+                        width="16"
+                        height="16"
+                        style="vertical-align: -7px"
+                    />
+                    <small class="text-muted" style="vertical-align: top"
+                        >&copy; 2020 - 2022
+                    </small>
+                </center>
+            </footer>
+        </div>
+
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
